@@ -14,7 +14,11 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands';
+
+// Cypress omleid hier de error, https://github.com/quasarframework/quasar/issues/2233
+Cypress.on('uncaught:exception', err => !err.message.includes('ResizeObserver'));
+
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
