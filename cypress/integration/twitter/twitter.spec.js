@@ -1,7 +1,5 @@
-const SEARCH_TAG = "%23Crypto";
-const REPLY_TEXT = "Nice";
-
 let twitterData;
+
 
 before(() => {
     cy.fixture('twitter').then(data => {
